@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:heartss/show.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'image_show.dart';
 
@@ -55,16 +56,13 @@ class _FinalState extends State<Final> {
                   Expanded(
                     child: GestureDetector(
                       onTap: (){
-                        Alert(
-                          context: context,
-                          title: "In Production",
-                          desc: "Soon into development (details about the disease)",
-                        ).show();
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => Yh()));
                       },
                       child: Card(
                         child: ListTile(
                           title: Text(
-                              'Your maximum beats are: ' + answer['beats']
+                              'Info about Beats'
                           ),
                         ),
                       ),
@@ -78,13 +76,16 @@ class _FinalState extends State<Final> {
                   Expanded(
                     child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(
-                          //     context, MaterialPageRoute(builder: (context) => SpinnerThree(path)));
+                          Alert(
+                            context: context,
+                            title: "In Production",
+                            desc: "Soon into development",
+                          ).show();
                         },
                         child: Card(
                           child: ListTile(
                             title: Text(
-                                'Show Wheezle and Crackles'
+                                'Link to doctors'
                             ),
                           ),
                         )
