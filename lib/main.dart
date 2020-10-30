@@ -1,5 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
+import 'multiple.dart';
+import 'predict.dart';
 
 void main() {
   return runApp(MyApp());
@@ -31,15 +35,25 @@ class FilePick extends StatefulWidget {
 
 class _FilePickState extends State<FilePick> {
 
+  // void fileupload() async {
+  //   FilePickerResult result = await FilePicker.platform.pickFiles();
+  //
+  //   if(result != null) {
+  //     PlatformFile file = result.files.first;
+  //
+  //     print('HELLO' + file.path);
+  //     Navigator.push(
+  //         context, MaterialPageRoute(builder: (context) => Show(file.path)));
+  //   }
+  // }
+
   void fileupload() async {
-    FilePickerResult result = await FilePicker.platform.pickFiles();
+    FilePickerResult result = await FilePicker.platform.pickFiles(allowMultiple: true);
 
     if(result != null) {
-      PlatformFile file = result.files.first;
-
-      print('HELLO' + file.path);
-      // Navigator.push(
-      //     context, MaterialPageRoute(builder: (context) => Show(file.path)));
+      List<File> files = result.paths.map((path) => File(path)).toList();
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Multi(files)));
     }
   }
 
