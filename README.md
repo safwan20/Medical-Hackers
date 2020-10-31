@@ -9,7 +9,7 @@ Our theme for this hacakathon is based on integrating medical analysis with conc
 # Technical-Stack : 
 AI/ML, REST API, FLUTTER, FLASK.
 
-# Screen-Shot 
+# Screen-Shots 
 ![rsz_screenshot_2020-10-31-04-21-29-690_comsafwanheartss_1](https://user-images.githubusercontent.com/45730556/97763765-a37b1780-1b32-11eb-9524-70a2d8112373.jpg) 
 ![rsz_screenshot_2020-10-31-04-22-04-433_comandroiddocumentsui_1](https://user-images.githubusercontent.com/45730556/97763771-a970f880-1b32-11eb-9d33-e8e49a16373c.jpg) 
 ![rsz_screenshot_2020-10-31-04-22-12-292_comsafwanheartss](https://user-images.githubusercontent.com/45730556/97763780-afff7000-1b32-11eb-8df1-c65b4f55d268.jpg) 
